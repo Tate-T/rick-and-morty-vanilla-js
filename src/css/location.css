@@ -1,0 +1,106 @@
+.container {
+}
+
+.location-section {
+  padding: 64px 0;
+}
+
+.location-header {
+  margin-bottom: 40px;
+}
+
+.location-pretitle {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.location-title {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 24px;
+}
+
+.location-description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.location-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 32px;
+}
+
+.location-contacts {
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.contact-item {
+}
+
+.contact-icon {
+  flex-shrink: 0;
+}
+
+.icon {
+}
+
+.contact-info {
+    padding-top: 16px;
+}
+
+.contact-label {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+
+.contact-link {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5%;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
+.directions {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  display: inline-flex;
+  gap: 8px;
+}
+
+.contact-address {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.icon-get-d {
+    display: block;
+}
+
+.location-map iframe{
+border-radius: 40px;
+width: 288px;
+height: 307px;
+}

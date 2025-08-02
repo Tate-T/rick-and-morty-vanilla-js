@@ -1,0 +1,142 @@
+.footer-container {
+  max-width: 320px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: #b58869;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-container {
+    max-width: 768px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .footer-container {
+    max-width: 1440px;
+  }
+}
+
+.footer-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(11, 8, 3, 0.15);
+  border-radius: 40px;
+  padding: 32px 48px;
+  max-width: 288px;
+  width: 100%;
+  height: 500px;
+  background-color: #c29d84;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-card {
+    max-width: 702px;
+    height: 156px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 32px;
+    column-gap: 40px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .footer-card {
+    max-width: 1312px;
+    height: 100px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 0;
+    column-gap: 0;
+  }
+}
+
+.footer-logo {
+  margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-logo {
+    margin-bottom: 0;
+    width: 84px;
+    height: 36px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .footer-logo {
+    margin-left: 10px;
+  }
+}
+
+.footer-socials {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-socials {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .footer-socials {
+    margin-left: 40px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.footer-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-list {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .footer-list {
+    justify-content: flex-end;
+    flex-grow: 1;
+    margin-left: 0;
+  }
+}
+
+.footer-item {
+  font-size: 16px;
+}
+
+.text-credits {
+  font-size: 14px;
+  margin-top: 32px;
+  text-align: center;
+}
+
+a:focus-visible {
+  outline: 2px solid #0b0803;
+  outline-offset: 2px;
+}
