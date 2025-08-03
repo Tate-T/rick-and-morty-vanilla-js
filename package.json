@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "glob": "^8.1.0",
-    "vite": "^4.5.2"
+    "vite": "^4.5.14"
   },
   "author": " <@gmail.com>",
   "license": "ISC",
