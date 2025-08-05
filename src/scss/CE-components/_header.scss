@@ -1,0 +1,99 @@
+.header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    outline: 1px solid green;
+
+    &__div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media screen and (min-width: 768px) {
+
+        }
+        @media screen and (min-width: 1360px) {
+            display: flex;
+        }
+    }
+
+    &__logo {
+        width: 120px;
+        height: 45px;
+
+        @media screen and (min-width: 768px) {
+            width: 193px;
+            height: 73px;
+        }
+        @media screen and (min-width: 1360px) {
+            width: 193px;
+            height: 73px;
+        }
+    }
+
+    &__input-div {
+        width: 103px;
+        height: 36px;
+        border: 1px solid #7b7b7b;
+        border-radius: 30px;
+        display: flex;
+        gap: 1px;
+        padding-left: 10px;
+        align-items: center;
+
+        @media screen and (min-width: 768px) {
+            width: 124px;
+            height: 42px;
+            padding-left: 17px;
+
+        }
+
+        @media screen and (min-width: 1360px) {
+            width: 124px;
+            height: 42px;
+
+        }
+    }
+
+    &__button {
+        width: 30px;
+        height: 18px;
+        display: inherit;
+        background-color: transparent;
+        border: none;
+    }
+
+    &__input-img {
+        width: 18px;
+        height: 18px;
+    }
+
+
+
+    &__input {
+        background-color: transparent;
+        display: block;
+        width: 50px;
+        height: 16px;
+        border: none;
+        font-size: 12px;
+        line-height: 16px;
+        color: #FAFAFA;
+        font-weight: 600;
+
+
+        @media screen and (min-width: 768px) {
+            display: block;
+            width: 54px;
+            height: 18px;
+            border: none;
+            font-size: 14px;
+            line-height: 18px;
+
+        }
+
+    }
+
+    &__input::placeholder {
+        color: #FAFAFA;
+    }
+}
