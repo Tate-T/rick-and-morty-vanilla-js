@@ -14,9 +14,10 @@
     />
     
     <script type="module" crossorigin src="/rick-and-morty-vanilla-js/assets/main-3cfb730f.js"></script>
-    <link rel="stylesheet" href="/rick-and-morty-vanilla-js/assets/characters-af1e618c.css">
+    <link rel="stylesheet" href="/rick-and-morty-vanilla-js/assets/characters-2e0f1b9a.css">
   </head>
   <body>
+    <div class="black-background"></div>
     <header class="header">
     <div class="header__div container">
         <picture class="header__logo">
@@ -32,7 +33,7 @@
                 srcset="/rick-and-morty-vanilla-js/assets/logo-mobile-6fb74d76.webp 1x, /rick-and-morty-vanilla-js/assets/logo-mobile-2x-064f3b2a.webp 2x"
                 media="(min-width: 320px)"
                 />
-            <img class="team____image" src="/rick-and-morty-vanilla-js/assets/logo-pc-fb768a58.webp" alt="logo" />
+            <img class="header__logo" src="/rick-and-morty-vanilla-js/assets/logo-pc-fb768a58.webp" alt="logo" />
         </picture>
         <div class="header__input-div">
             <button type="button" class="header__button">
@@ -44,7 +45,35 @@
     </div>
 </header>
     <main>
-      
+      <section class="hero">
+    <div class="hero__container container">
+        <div class="hero__text-div">
+                <h1 class="hero__title">Characters</h1>
+                <p class="hero__text">Our character bios provide detailed information
+                    on every member of the Smith family and beyond.  
+                    Get to know these unforgettable characters on a whole new level 
+                    - start exploring now!</p>
+                <a class="hero__button" href="./index.html">Back home</a>
+        </div>
+        <div class="hero__image-div">
+                <picture class="hero__image">
+                    <source
+                            srcset="/rick-and-morty-vanilla-js/assets/hero-characters-pc-1d6a3e07.webp 1x, /rick-and-morty-vanilla-js/assets/hero-characters-pc-2x-a2ccd130.webp 2x"
+                            media="(min-width: 1360px)"
+                            />
+                    <source
+                            srcset="/rick-and-morty-vanilla-js/assets/hero-characters-tablet-6f1f23de.webp 1x, /rick-and-morty-vanilla-js/assets/hero-characters-tablet-2x-939d8a50.webp 2x"
+                            media="(min-width: 768px)"
+                            />
+                    <source
+                            srcset="/rick-and-morty-vanilla-js/assets/hero-characters-mobile-2749eed4.webp 1x, /rick-and-morty-vanilla-js/assets/hero-characters-mobile-2x-072d8e8f.webp 2x"
+                            media="(min-width: 320px)"
+                            />
+                    <img class="hero__image" src="/rick-and-morty-vanilla-js/assets/hero-characters-pc-1d6a3e07.webp" alt="characters hero section image" />
+                </picture>
+        </div>
+    </div>
+</section>
       
       
     </main>
