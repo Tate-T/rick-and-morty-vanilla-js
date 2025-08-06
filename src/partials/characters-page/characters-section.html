@@ -1,0 +1,38 @@
+<section class="hero">
+    <div class="hero__container container">
+        <div class="hero__text-div">
+                <h1 class="hero__title">Characters</h1>
+                <p class="hero__text">Our character bios provide detailed information
+                    on every member of the Smith family and beyond.  
+                    Get to know these unforgettable characters on a whole new level 
+                    - start exploring now!</p>
+                <a class="hero__button" href="./index.html">Back home</a>
+        </div>
+        <div class="hero__image-div">
+                <picture class="hero__image">
+                    <source
+                            srcset="
+                                ./img/characters/desktop/hero-characters-pc.webp 1x,
+                                ./img/characters/desktop/hero-characters-pc-2x.webp 2x,
+                            "
+                            media="(min-width: 1360px)"
+                            />
+                    <source
+                            srcset="
+                                ./img/characters/tablet/hero-characters-tablet.webp 1x,
+                                ./img/characters/tablet/hero-characters-tablet-2x.webp 2x,
+                                "
+                            media="(min-width: 768px)"
+                            />
+                    <source
+                            srcset="
+                                ./img/characters/mobile/hero-characters-mobile.webp 1x,
+                                ./img/characters/mobile/hero-characters-mobile-2x.webp 2x,
+                                "
+                            media="(min-width: 320px)"
+                            />
+                    <img class="hero__image" src="./img/characters/desktop/hero-characters-pc.webp" alt="characters hero section image" />
+                </picture>
+        </div>
+    </div>
+</section>
