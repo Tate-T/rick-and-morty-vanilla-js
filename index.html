@@ -14,19 +14,31 @@
     />
     
     <script type="module" crossorigin src="/rick-and-morty-vanilla-js/assets/main-3cfb730f.js"></script>
+    <link rel="stylesheet" href="/rick-and-morty-vanilla-js/assets/index-a712d969.css">
   </head>
   <body>
     <div class="black-background-main"></div>
-    <header>
-  <div>
-    <a href="./characters.html">
-      <button type="button">Characters</button>
-    </a>
-    <a href="./episodes.html">
-      <button type="button">Episodes</button>
-    </a>
+    <header class="header">
+  <div class="header__box container">
+    <div class="header__box-link">
+      <a class="header__link" href="./characters.html">
+        <button class="header__characters-btn" type="button">Characters</button>
+      </a>
+      <a class="header__link" href="./episodes.html">
+        <button class="header__episodes-btn" type="button">Episodes</button>
+      </a>
+    </div>
+    <div class="header__input-div">
+      <button type="button" class="header__button">
+        <img
+          class="header__input-img"
+          src="data:image/webp;base64,UklGRsgAAABXRUJQVlA4TLwAAAAvEYAEENegpm0Dxl/5Ax401LRtwPgrf8BDTdsGjL/yBzxMRbJBgncRRBBB/y8aiKCBgP2nbUHbDA4hAAIAAP4vGoPHbDtsW5IIBZAADttIUqQ+htneo96j/DNdeIggov8TgP/tH8d5VIGM030tjmtG5k8A0Mg1NVJI3wyROCBbuTuqGXIYLbqIwotRz6rgdtHBo+CdIrgp17FNdFxTMo/0Rr9X0OrolUJnjJfTvFLA2V9NBci8MnlZ+9G3AQ=="
+          alt="search"
+        />
+      </button>
+      <input class="header__input" placeholder="Search" type="text" />
+    </div>
   </div>
-  <button>Search</button>
 </header>
 
     <main>
