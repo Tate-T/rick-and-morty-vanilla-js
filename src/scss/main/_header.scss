@@ -1,3 +1,136 @@
-h1 {
-    color: pink;
+.header {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  outline: 1px solid green;
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (min-width: 768px) {
+    }
+    @media screen and (min-width: 1360px) {
+      display: flex;
+    }
+  }
+
+  &__characters-btn {
+    // width: 126px;
+    height: 42px;
+    font-size: 12px;
+    line-height: 18px;
+    border: 1px black;
+    color: black;
+    word-wrap: break-word;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-family: Montserrat;
+    background-color: rgba(161, 215, 55, 1);
+    border-radius: 30px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+      font-weight: 600;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    @media screen and (min-width: 1360px) {
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  &__episodes-btn {
+    // width: 113px;
+    height: 42px;
+    border: 1px solid #7b7b7b;
+    background-color: transparent;
+    color: #fafafa;
+    font-size: 12px;
+    line-height: 18px;
+    word-wrap: break-word;
+    font-family: Montserrat;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 30px;
+
+    @media screen and (min-width: 768px) {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-left: 24px;
+      padding-right: 24px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    @media screen and (min-width: 1360px) {
+    }
+  }
+
+  &__input-div {
+    width: 103px;
+    height: 36px;
+    border: 1px solid #7b7b7b;
+    border-radius: 30px;
+    display: flex;
+    gap: 1px;
+    padding-left: 10px;
+    align-items: center;
+
+    @media screen and (min-width: 768px) {
+      width: 124px;
+      height: 42px;
+      padding-left: 17px;
+    }
+
+    @media screen and (min-width: 1360px) {
+      width: 124px;
+      height: 42px;
+    }
+  }
+
+  &__button {
+    width: 30px;
+    height: 18px;
+    display: inherit;
+    background-color: transparent;
+    border: none;
+  }
+
+  &__input-img {
+    width: 18px;
+    height: 18px;
+  }
+
+  &__input {
+    background-color: transparent;
+    display: block;
+    width: 50px;
+    height: 16px;
+    border: none;
+    font-size: 12px;
+    line-height: 16px;
+    color: #fafafa;
+    font-weight: 600;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+      width: 54px;
+      height: 18px;
+      border: none;
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  &__input::placeholder {
+    color: #fafafa;
+  }
 }
