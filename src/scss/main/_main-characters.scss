@@ -3,22 +3,55 @@
   font-family: Arial, sans-serif;
 
   h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 28px;
+    font-family: Montserrat;
+    font-weight: 600;
+    line-height: 32px;
+    word-wrap: break-word;
+    @media screen and (min-width: 768px) {
+      font-size: 44px;
+      line-height: 44px;
+    }
+
+    @media screen and (min-width: 1360px) {
+    }
 
     span {
       background: black;
       color: white;
-      padding: 4px 8px;
-      border-radius: 15px;
+      padding: 5px 17px;
+      border-radius: 44px;
       font-weight: bold;
+      font-size: 28px;
+      font-family: Montserrat;
+      font-weight: 600;
+      line-height: 32px;
+
+      @media screen and (min-width: 768px) {
+        font-size: 44px;
+        line-height: 44px;
+        padding-left: 17px;
+        padding-top: 4px;
+        padding-bottom: 8px;
+      }
+
+      @media screen and (min-width: 1360px) {
+      }
     }
   }
 
   &__container {
     display: flex;
     gap: 20px;
-    align-items: flex-start;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) and (max-width: 1359px) {
+      flex-direction: column;
+    }
+
+    @media screen and (min-width: 1360px) {
+      flex-direction: row;
+    }
   }
 
   &__image {
@@ -40,30 +73,57 @@
     flex: 2;
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 24px;
+
+    @media screen and (min-width: 768px) {
+      gap: 32px;
+    }
+
+    @media screen and (min-width: 1360px) {
+    }
   }
   &__character {
     border-bottom: 1px solid #ccc;
-    padding-bottom: 16px;
+    padding-bottom: 14px;
     cursor: pointer;
+    @media screen and (min-width: 768px) {
+      padding-bottom: 16px;
+    }
+
+    @media screen and (min-width: 1360px) {
+    }
   }
   &__name {
+    font-size: 18px;
     color: #111111;
-    font-size: 24px;
     font-family: Montserrat;
     font-weight: 600;
     line-height: 28px;
     word-wrap: break-word;
+
+    @media screen and (min-width: 768px) {
+      font-size: 24px;
+    }
+
+    @media screen and (min-width: 1360px) {
+    }
   }
 
   &__text {
+    font-size: 14px;
     margin-top: 16px;
     color: #111111;
-    font-size: 16px;
     font-family: Montserrat;
     font-weight: 400;
     line-height: 18px;
     word-wrap: break-word;
+
+    @media screen and (min-width: 768px) {
+      font-size: 16px;
+    }
+
+    @media screen and (min-width: 1360px) {
+    }
   }
 
   &__name:hover {
