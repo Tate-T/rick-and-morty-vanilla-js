@@ -392,8 +392,7 @@
     }
 
     &__text1, &__text2 {
-        color: #111111;
-        opacity: 50%;
+        color: rgb(17, 17, 17, 0.5);
         font-size: 14px;
         line-height: 18px;
         font-weight: 400;
@@ -411,9 +410,8 @@
         margin-bottom: 5px;
     }
 
-    &__origin {
-        color: #111111;
-        opacity: 100%;
+    &__origin, &__location {
+        color: rgb(17, 17, 17, 1);
         font-weight: 400;
         font-size: 14px;
         line-height: 18px;
