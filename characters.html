@@ -13,9 +13,9 @@
       referrerpolicy="no-referrer"
     />
     
-    <script type="module" crossorigin src="/rick-and-morty-vanilla-js/assets/characters-ff47363a.js"></script>
+    <script type="module" crossorigin src="/rick-and-morty-vanilla-js/assets/characters-4b6f25bb.js"></script>
     <link rel="modulepreload" crossorigin href="/rick-and-morty-vanilla-js/assets/modulepreload-polyfill-3cfb730f.js">
-    <link rel="stylesheet" href="/rick-and-morty-vanilla-js/assets/characters-fe55a38d.css">
+    <link rel="stylesheet" href="/rick-and-morty-vanilla-js/assets/characters-8695f36e.css">
   </head>
   <body>
     <div class="black-background"></div>
@@ -107,6 +107,7 @@
                         <div class="filter__select-div">
                             <p class="filter__label">Status</p>
                                 <select class="filter__select1" name="Alive" id="">
+                                    <option value="All">All</option>
                                     <option value="Alive">Alive</option>
                                     <option value="Dead">Dead</option>
                                     <option value="Unknown">Unknown</option>
@@ -115,6 +116,7 @@
                             <div class="filter__select-div">
                                 <p class="filter__label">Species</p>
                                 <select class="filter__select2" name="Human" id="">
+                                    <option value="All">All</option>
                                     <option value="Human">Human</option>
                                     <option value="Alien">Alien</option>
                                     <option value="Mythological Creature">Mythological Creature</option>
@@ -131,6 +133,7 @@
                                 <div class="filter__select-div">
                                     <p class="filter__label">Type</p>
                                     <select class="filter__select3" name="Parasite" id="">
+                                        <option value="All">All</option>
                                         <option value="Parasite">Parasite</option>
                                         <option value="Human with ants in his eyes">Human with ants in his eyes</option>
                                         <option value="Superhuman">Superhuman</option>
@@ -234,7 +237,106 @@
         <p class="footer__article">Privacy Policy Public Offering Agreement</p>
     </div>
 </footer>
-    
+    <div class="backdrop hidden">
+    <div class="modal">
+        <div class="modal__character-div">
+            <div class="modal__image">
+                <img src="" alt="image of a character">
+            </div>
+            <div class="modal__info">
+                <ul class="modal__info-list">
+                    <li class="modal__info-item">
+                        <p class="modal__info-text">Status</p>
+                        <p class="modal__info-info"></p>
+                    </li>
+                    <li class="modal__info-item">
+                        <p class="modal__info-text">Species</p>
+                        <p class="modal__info-info"></p>
+                    </li>
+                    <li class="modal__info-item">
+                        <p class="modal__info-text">Gender</p>
+                        <p class="modal__info-info"></p>
+                    </li>
+                    <li class="modal__info-item">
+                        <p class="modal__info-text">Origin</p>
+                        <p class="modal__info-info"></p>
+                    </li>
+                    <li class="modal__info-item">
+                        <p class="modal__info-text">Location</p>
+                        <p class="modal__info-info"></p>
+                    </li>
+                    <li class="modal__info-item">
+                        <p class="modal__info-text">Type</p>
+                        <p class="modal__info-info"></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="modal__episodes-div">
+            <h2 class="modal__title">Episodes</h2>
+            <ul class="modal__episodes-list">
+                <li class="modal__episodes-item">
+                    <h3 class="modal__episode-title"></h3>
+                    <div class="modal__episode-season">
+                        <p class="modal__episode-text">Season</p>
+                        <p class="modal__episode-info"></p>
+                    </div>
+                    <div class="modal__episode-airdate">
+                        <p class="modal__episode-text">Air date</p>
+                        <p class="modal__episode-info"></p>
+                    </div>
+                </li>
+                <li class="modal__episodes-item">
+                    <h3 class="modal__episode-title"></h3>
+                    <div class="modal__episode-season">
+                        <p class="modal__episode-text">Season</p>
+                        <p class="modal__episode-info"></p>
+                    </div>
+                    <div class="modal__episode-airdate">
+                        <p class="modal__episode-text">Air date</p>
+                        <p class="modal__episode-info"></p>
+                    </div>
+                </li>
+                <li class="modal__episodes-item">
+                    <h3 class="modal__episode-title"></h3>
+                    <div class="modal__episode-season">
+                        <p class="modal__episode-text">Season</p>
+                        <p class="modal__episode-info"></p>
+                    </div>
+                    <div class="modal__episode-airdate">
+                        <p class="modal__episode-text">Air date</p>
+                        <p class="modal__episode-info"></p>
+                    </div>
+                </li>
+                <li class="modal__episodes-item">
+                    <h3 class="modal__episode-title"></h3>
+                    <div class="modal__episode-season">
+                        <p class="modal__episode-text">Season</p>
+                        <p class="modal__episode-info"></p>
+                    </div>
+                    <div class="modal__episode-airdate">
+                        <p class="modal__episode-text">Air date</p>
+                        <p class="modal__episode-info"></p>
+                    </div>
+                </li>
+                <li class="modal__episodes-item">
+                    <h3 class="modal__episode-title"></h3>
+                    <div class="modal__episode-season">
+                        <p class="modal__episode-text">Season</p>
+                        <p class="modal__episode-info"></p>
+                    </div>
+                    <div class="modal__episode-airdate">
+                        <p class="modal__episode-text">Air date</p>
+                        <p class="modal__episode-info"></p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <button class="modal__close" type="button">
+            <img src="" alt="button for closing modal">
+        </button>
+    </div>
+</div>
     
   </body>
 </html>
