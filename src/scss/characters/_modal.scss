@@ -1,0 +1,38 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal {
+    width: 335px;
+    height: 993px;
+    background-color: #0D171D;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
+    @media screen and (min-width: 768px){
+        width: 702px;
+        height: 510px;
+        padding: 20px;
+    }
+
+    @media screen and (min-width: 1360px){
+        width: 710px;
+        height: 510px;
+        padding: 20px;
+    }
+
+}
+
+
+.hidden {
+    display: none;
+}
