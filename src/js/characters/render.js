@@ -2,7 +2,7 @@ export default function renderCharacters(characters) {
     const objectChange = characters
     .map((object) => {
     const newObject = `
-    <li class="character">
+    <li class="character" data-id='${object.id}'>
         <img class="character__image" src="${object.image}" alt="photo of character"/>
         <h2 class="character__name">${object.name}</h2>
         <p class="character__text1">Origin: <span class="character__origin">${object.origin.name}</span></p>
