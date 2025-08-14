@@ -57,9 +57,9 @@ body {
     }
 }
 
-section, header, footer {
-    outline: solid green;
-}
+// section, header, footer {
+//     outline: solid green;
+// }
 
 
 input {
@@ -72,7 +72,7 @@ input {
     margin: 0 auto;
     max-width: 335px;
     width: 100%;
-    outline: solid red;
+    // outline: solid red;
     overflow-x: hidden;
 
     @media screen and (min-width: 768px){
