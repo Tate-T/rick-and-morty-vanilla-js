@@ -44,13 +44,19 @@ body {
 }
 
 .black-background-main {
-    width: 375px;
-    height: 785px;
+    width: 330px;
+    height: 780px;
     background-color: #0D171D;
     border-bottom-left-radius: 70px;
     border-bottom-right-radius: 70px;
     position: absolute;
+    left: 50%;
+    transform: translate(-50%);
     z-index: -1;
+
+    @media screen and (min-width: 375px){
+        width: 375px;
+    }
 
     @media screen and (min-width: 768px){
         width: 768px;
