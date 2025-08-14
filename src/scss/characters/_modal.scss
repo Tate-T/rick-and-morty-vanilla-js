@@ -2,42 +2,49 @@
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
     bottom: 0;
+    right: 0;
     background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1000;
+
 }
+
+
 
 .modal {
     width: 335px;
-    height: 993px;
+    height: 95%;
     background-color: #0D171D;
     border-radius: 16px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     display: flex;
     padding-top: 40px;
-    padding-left: 15px;
+    padding-left: 20px;
     padding-right: 15px;
     padding-bottom: 20px;
     gap: 25px;
     flex-direction: column;
     position: relative;
+    margin: 0 auto;
+    overflow-y: hidden;
 
     @media screen and (min-width: 768px){
         width: 702px;
-        height: 510px;
-        padding: 20px;
+        height: 526px;
+        padding-top: 33px;
+        padding-bottom: 33px;
+        padding-left: 33px;
         gap: 15px;
         flex-direction: row;
+        
     }
 
     @media screen and (min-width: 1360px){
         width: 710px;
-        height: 510px;
-        padding: 20px;
+        height: 526px;
     }
 
     &__character-div {
@@ -169,7 +176,8 @@
         flex-direction: column;
         gap: 15px;
         width: 295px;
-
+        overflow: hidden;
+        
         @media screen and (min-width: 768px){
             width: 352px;
             gap: 10px;
@@ -188,6 +196,7 @@
         border-radius: 20px;
         padding-left: 10px;
         padding-top: 10px;
+        flex-shrink: 0;
 
         @media screen and (min-width: 768px){
             padding-left: 12px;

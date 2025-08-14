@@ -3,6 +3,42 @@ import { default as getCharacters } from "./api/characters-api"
 
 let page = 1
 
+window.addEventListener('DOMContentLoaded', function() {
+  function openModal() {
+    const modal = document.querySelector('.modal');
+    modal.style.display = 'flex'; 
+    setTimeout(hideOverflowingItems, 50);
+  }
+
+  function hideOverflowingItems() {
+    const modal = document.querySelector('.modal');
+    const list = document.querySelector('.modal__episodes-list');
+    const items = document.querySelectorAll('.modal__episodes-item');
+    items.forEach(item => item.style.display = 'flex');
+    const modalRect = modal.getBoundingClientRect();
+    const listRect = list.getBoundingClientRect();
+    const availableSpace = modalRect.bottom - listRect.top - 20; 
+    
+    let accumulatedHeight = 0;
+    
+    items.forEach(item => {
+      const itemHeight = item.offsetHeight;
+      if (accumulatedHeight + itemHeight > availableSpace) {
+        item.style.display = 'none';
+      } else {
+        accumulatedHeight += itemHeight + 15; 
+      }
+    });
+  }
+
+    document.querySelector('.filter__list').addEventListener('click', (e) => {
+        if (e.target.closest('.character__button')) {
+            openModal
+        }})
+  
+  window.addEventListener('resize', hideOverflowingItems);
+});
+
 
 
 getCharacters(page).then(
@@ -196,5 +232,5 @@ document.querySelector('.filter__load-more').addEventListener('click', () => {
     });
 })
 
-
+// Wait for DOM and all resources to load
 
