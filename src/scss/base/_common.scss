@@ -6,25 +6,31 @@ body {
     position: relative;
     margin: 0 auto;
     display: block;
-    max-width: 375px;
+    width: 100%;
 
     @media screen and (min-width: 768px){
-        max-width: 768px;
+        width: 100%;
     }
 
     @media screen and (min-width: 1360px){
-        max-width: 1440px;
+        width: 100%;
     }
 }
 
 .black-background {
-    width: 375px;
+    width: 330px;
     height: 780px;
     background-color: #0D171D;
     border-bottom-left-radius: 70px;
     border-bottom-right-radius: 70px;
     position: absolute;
+    left: 50%;
+    transform: translate(-50%);
     z-index: -1;
+
+    @media screen and (min-width: 375px){
+        width: 375px;
+    }
 
     @media screen and (min-width: 768px){
         width: 768px;
