@@ -11,6 +11,68 @@ getCharacters(page).then(
         console.log(data.results)
         console.log(data)
 
+        document.querySelector('.filter__list').addEventListener('click', (e) => {
+            if (e.target.closest('.character__button')) {
+                document.querySelector('.backdrop').classList.remove('hidden');;
+                const character = e.target.closest('.character')
+                const characterId = Number(character.dataset.id) - 1;
+                const characterData = data.results[characterId];
+                document.querySelector('.modal__img').src = characterData.image
+                document.querySelector('#status').innerHTML = characterData.status
+                document.querySelector('#species').innerHTML = characterData.species
+                document.querySelector('#gender').innerHTML = characterData.gender
+                document.querySelector('#origin').innerHTML = characterData.origin.name
+                document.querySelector('#location').innerHTML = characterData.location.name
+                document.querySelector('#episodes').innerHTML = characterData.episode.length
+
+                for (let i = 0; i <= 4; i++){
+                    if (i === 0){
+                        fetch(`${characterData.episode[i]}`)
+                        .then(res => res.json())
+                        .then(character => {
+                            document.querySelector('#title1').innerHTML = character.name;
+                            document.querySelector('#season1').innerHTML = character.episode;
+                            document.querySelector('#airdate1').innerHTML = character.air_date;
+                        });
+                    } else if (i === 1){
+                        fetch(`${characterData.episode[i]}`)
+                        .then(res => res.json())
+                        .then(character => {
+                            document.querySelector('#title2').innerHTML = character.name;
+                            document.querySelector('#season2').innerHTML = character.episode;
+                            document.querySelector('#airdate2').innerHTML = character.air_date;
+                        });
+                    } else if (i === 2){
+                        fetch(`${characterData.episode[i]}`)
+                        .then(res => res.json())
+                        .then(character => {
+                            document.querySelector('#title3').innerHTML = character.name;
+                            document.querySelector('#season3').innerHTML = character.episode;
+                            document.querySelector('#airdate3').innerHTML = character.air_date;
+                        });
+                    } else if (i === 3){
+                        fetch(`${characterData.episode[i]}`)
+                        .then(res => res.json())
+                        .then(character => {
+                            document.querySelector('#title4').innerHTML = character.name;
+                            document.querySelector('#season4').innerHTML = character.episode;
+                            document.querySelector('#airdate4').innerHTML = character.air_date;
+                        });
+                    } else if (i === 4){
+                        fetch(`${characterData.episode[i]}`)
+                        .then(res => res.json())
+                        .then(character => {
+                            document.querySelector('#title5').innerHTML = character.name;
+                            document.querySelector('#season5').innerHTML = character.episode;
+                            document.querySelector('#airdate5').innerHTML = character.air_date;
+                        });
+                    }
+                }
+
+
+            }
+        });
+
         document.querySelector('.filter__select1').addEventListener('change', (e) => {
             const searchStatus = e.target.value.toLowerCase();
             document.querySelector('.filter__select2').value = 'All'
@@ -102,17 +164,10 @@ getCharacters(page).then(
   );
 
 
-document.querySelector('.filter__list').addEventListener('click', (e) => {
-  if (e.target.closest('.character__button')) {
-    document.querySelector('.backdrop').classList.remove('hidden');;
-  }
-});
-
 
 document.querySelector('.modal__close').addEventListener('click', () => {
     document.querySelector('.backdrop').classList.add('hidden');
 })
-
 
 
 document.querySelector('.filter__input').addEventListener('input', (e) => {
