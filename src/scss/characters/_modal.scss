@@ -1,4 +1,5 @@
 .backdrop {
+    overflow-y: hidden;
     position: fixed;
     top: 0;
     left: 0;
@@ -9,6 +10,7 @@
     align-items: center;
     justify-content: center;
     z-index: 1000;
+    
 
 }
 
@@ -177,7 +179,7 @@
         gap: 15px;
         width: 295px;
         overflow: hidden;
-        
+
         @media screen and (min-width: 768px){
             width: 352px;
             gap: 10px;
