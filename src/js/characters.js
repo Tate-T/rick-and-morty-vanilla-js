@@ -70,7 +70,6 @@ getCharacters(page).then(
                     }
                 }
 
-
             }
         });
 
