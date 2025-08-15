@@ -308,4 +308,49 @@
     display: none;
 }
 
+#item2, #item3, #item4, #item5 {
+    display: none;
 
+    @media screen and (min-width: 768px){
+        display: flex;
+        }
+}
+
+
+#next-episode {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: transparent;
+    border: 2px solid #A1D737;
+        color: #A1D737;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 6px 16px;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+
+    @media screen and (min-width: 768px){
+        display: none;
+        }
+}
+
+#next-episode {
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    background-color: transparent;
+    border: 2px solid #A1D737;
+        color: #A1D737;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 6px 16px;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+
+    @media screen and (min-width: 768px){
+        display: none;
+        }
+}
