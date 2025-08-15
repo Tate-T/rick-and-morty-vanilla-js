@@ -13,9 +13,9 @@
       referrerpolicy="no-referrer"
     />
     
-    <script type="module" crossorigin src="/rick-and-morty-vanilla-js/assets/modulepreload-polyfill-3cfb730f.js"></script>
-    <script type="module" crossorigin src="/rick-and-morty-vanilla-js/assets/main-6a8ace69.js"></script>
-    <link rel="stylesheet" href="/rick-and-morty-vanilla-js/assets/episodes-af1b5b0e.css">
+    <script type="module" crossorigin src="/rick-and-morty-vanilla-js/assets/episodes-ff3301e1.js"></script>
+    <link rel="modulepreload" crossorigin href="/rick-and-morty-vanilla-js/assets/modulepreload-polyfill-3cfb730f.js">
+    <link rel="stylesheet" href="/rick-and-morty-vanilla-js/assets/episodes-85549ee1.css">
   </head>
   <body>
     <div class="black-background"></div>
@@ -77,7 +77,40 @@
         <img class="tags__img" src="./img/component-images/tags.webp" alt="tags" />
     </picture> -->
 </section>
-      
+      <section class="filter">
+    <div class="filter__container container">
+        <div class="filter__div">
+            <div class="filter__search-div">
+                <p class="filter__text">Name</p>
+                <div class="filter__input-btn">
+                    <input class="filter__input" type="text" placeholder="Enter name">
+                    <button class="filter__search-btn">
+                        <img class="filter__search-img" src="data:image/webp;base64,UklGRtIAAABXRUJQVlA4WAoAAAAQAAAAEQAAEQAAQUxQSH4AAAABcE5te948CDHYi1CDxWAzaAyC8MYgMwhCEV6EIrwIQXh+5KNDiIgJwN9j1q9spc6xyarQ3gFHpcssUTEV95k7lpF5iPysYDZkho3aByU2lUPia+O6h0BdSW8Dri6LRpmI+zmEHw1zcd5VW6exzIBknV4PKMtiU3k+QpJnAABWUDggLgAAAPACAJ0BKhIAEgA+kTqZSCWjIqEoDVCwEglpAAA8HbQAAP73M0XZf7ii//w4AAA=" alt="search-button">
+                    </button>
+                </div>
+            </div>
+            <div class="filter__select-episode">
+                <div class="filter__select-episode1">
+                    <p class="filter__text">Episode code</p>
+                    <select class="filter__select" placeholder="All season" name="eeeeee" id="">
+                        <option value="All season">All season</option>
+                        <option value="1 season">1 season</option>
+                        <option value="1 series">1 series</option>
+                        <option value="2 series">2 series</option>
+                        <option value="3 series">3 series</option>
+                        <option value="4 series">4 series</option>
+                        <option value="5 series">5 series</option>
+                        <option value="6 series">6 series</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <ul class="filter__list"></ul>
+        <button class="filter__load" type="button">Load more</button>
+    </div>
+</section>
+
+
     </main>
     <footer class="footer">
     <div class="footer__container container">
@@ -156,7 +189,37 @@
         <p class="footer__article">Privacy Policy Public Offering Agreement</p>
     </div>
 </footer>
-    
+    <div class="backdrop hidden">
+    <div class="modal">
+        <div class="modal__border">
+            <h2 class="modal__title">Pilot</h2>
+            <div class="modal__episode-div">
+                <p class="modal__id">Id: <br> <span class="modal__id-text"></span></p>
+                <p class="modal__airDate">Air date: <br> <span class="modal__airDate-text"></span></p>
+            </div>
+                <h2 class="modal__title-characters">Characters</h2>
+                <div class="modal__characters">
+                    <p class="modal__subtitle">Major Characters</p>
+                    <img class="modal__characters-img" src="" alt="character">
+                    <p class="modal__name">Rick</p>
+                    <img class="modal__characters-img" src="" alt="character">
+                    <p class="modal__name">Morty</p>
+                    <img class="modal__characters-img" src="" alt="character">
+                    <p class="modal__name">Beth</p>
+                    <img class="modal__characters-img" src="" alt="character">
+                    <p class="modal__name">Jerry</p>
+                </div>
+        </div>
+        <button class="modal__close" type="button">
+            <picture class="modal__close-img">
+                    <source
+                        srcset="data:image/webp;base64,UklGRvIAAABXRUJQVlA4WAoAAAAQAAAAFQAAFQAAQUxQSFoAAAABJ0CQbRvbjGZypEdE0DwYRLab6DUxcCQABaCBgn9TSY8URPR/Avh54wQTFdgGM15AFkNSthV3vMjikc6V6likthWt5fmqbCtJvSyMl7OtQFITBRgH02CD+TNWUDggcgAAAHADAJ0BKhYAFgA+kUKcSiWjoqGoCACwEglsACPAN4KAg+m+AAD+7e1n+9j/5F5j+P5WpfBoJ56c2MyPkpfBgjCtsg6ugcwMUfg2J7P/wWvi2FbW6iuXbHtiAP7iUeoWqx/u/j145UHEav7+0/h95ogAAA== 1x, data:image/webp;base64,UklGRn4BAABXRUJQVlA4WAoAAAAQAAAAKwAAKwAAQUxQSIIAAAABL0CQbRvbSIZ2lEdEMPNwU9u2Ez2CAhQgIfdpRgE8/1oIN3S0Ef1n5EZSnGLxFUheEV8yGu8IbdbYkgXrj52sOC7QOUjdBVpFcIgCogKUgJqXBi8NHh247OWzdjoz/5bzwSEv3wnIywvIy984vjB8oQWkmvZ5eaRgVRFI4f6dHzICVlA4INYAAABwBwCdASosACwAPpFIn0ulpCKho4gAsBIJbAC+V4AOkA57X2E/2q9IDVssAATJALCIwDsx0ppTwgMUYQ2phnzl+Z30eAD+/FTl/yyoD/Sal9+np6Vy2HzM8HKHcpodxJf4/awuX3oBhDHSWIr3q3os+1HhaCtHIlYynjlKr9Ywpor70AwiAwIQf1p5bCE1H92optDBXnbRmwp0zvpsL9KN05TGLV1/zB7LwOxiCdcibmY1MM/9hY+1P5jP6+F/9G0s+HYWHyKpvpkqSNZiXZmpkkBAgAAA 2x"
+                        />
+                <img class="modal-close-img" src="data:image/webp;base64,UklGRvIAAABXRUJQVlA4WAoAAAAQAAAAFQAAFQAAQUxQSFoAAAABJ0CQbRvbjGZypEdE0DwYRLab6DUxcCQABaCBgn9TSY8URPR/Avh54wQTFdgGM15AFkNSthV3vMjikc6V6likthWt5fmqbCtJvSyMl7OtQFITBRgH02CD+TNWUDggcgAAAHADAJ0BKhYAFgA+kUKcSiWjoqGoCACwEglsACPAN4KAg+m+AAD+7e1n+9j/5F5j+P5WpfBoJ56c2MyPkpfBgjCtsg6ugcwMUfg2J7P/wWvi2FbW6iuXbHtiAP7iUeoWqx/u/j145UHEav7+0/h95ogAAA==" alt="characters hero section image" />
+            </picture>
+        </button>
+    </div>
+</div>
     
   </body>
 </html>
