@@ -56,6 +56,7 @@
 
   &__title {
     padding-left: 10px;
+  margin-bottom: 20px;
 
     @media screen and (min-width: 768px) and (max-width: 1359px) {
       padding-left: 30px;
@@ -63,6 +64,8 @@
 
     @media screen and (min-width: 1360px) {
       padding-left: 90px;
+      
+      margin-bottom: 40px;
     }
   }
 
