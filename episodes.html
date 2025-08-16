@@ -13,9 +13,9 @@
       referrerpolicy="no-referrer"
     />
     
-    <script type="module" crossorigin src="/rick-and-morty-vanilla-js/assets/episodes-b7405a00.js"></script>
+    <script type="module" crossorigin src="/rick-and-morty-vanilla-js/assets/episodes-bf535335.js"></script>
     <link rel="modulepreload" crossorigin href="/rick-and-morty-vanilla-js/assets/modulepreload-polyfill-3cfb730f.js">
-    <link rel="stylesheet" href="/rick-and-morty-vanilla-js/assets/episodes-29e4335f.css">
+    <link rel="stylesheet" href="/rick-and-morty-vanilla-js/assets/episodes-6274c0ea.css">
   </head>
   <body>
     <div class="black-background"></div>
@@ -37,10 +37,10 @@
             <img class="header__logo" src="/rick-and-morty-vanilla-js/assets/logo-pc-fb768a58.webp" alt="logo" />
         </picture>
         <div class="header__input-div">
-            <button onclick="document.querySelector('.filter').scrollIntoView({ behavior: 'smooth' });" id="button-search-episodes" type="button" class="header__button">
+            <button type="button" class="header__button">
                 <img class="header__input-img" src="data:image/webp;base64,UklGRsgAAABXRUJQVlA4TLwAAAAvEYAEENegpm0Dxl/5Ax401LRtwPgrf8BDTdsGjL/yBzxMRbJBgncRRBBB/y8aiKCBgP2nbUHbDA4hAAIAAP4vGoPHbDtsW5IIBZAADttIUqQ+htneo96j/DNdeIggov8TgP/tH8d5VIGM030tjmtG5k8A0Mg1NVJI3wyROCBbuTuqGXIYLbqIwotRz6rgdtHBo+CdIrgp17FNdFxTMo/0Rr9X0OrolUJnjJfTvFLA2V9NBci8MnlZ+9G3AQ==" alt="search">
             </button>
-            <input id="input-search-episodes" class="header__input" placeholder="Search" type="text">
+            <input class="header__input" placeholder="Search" type="text">
         </div>
         
     </div>
@@ -91,7 +91,6 @@
                         <option value="3 series">3 series</option>
                         <option value="4 series">4 series</option>
                         <option value="5 series">5 series</option>
-                        <option value="6 series">6 series</option>
                     </select>
                 </div>
             </div>
@@ -183,7 +182,7 @@
     <div class="backdrop hidden">
     <div class="modal">
         <div class="modal__border">
-            <h2 class="modal__title">Pilot</h2>
+            <h2 class="modal__title"></h2>
             <div class="modal__episode-div">
                 <p class="modal__id">Id: <br> <span class="modal__id-text"></span></p>
                 <p class="modal__airDate">Air date: <br> <span class="modal__airDate-text"></span></p>

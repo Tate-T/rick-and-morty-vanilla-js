@@ -1,0 +1,12 @@
+import"./modulepreload-polyfill-3cfb730f.js";function a(e){return e.map(t=>`
+    <li class="episode" data-id='${t.id}'>
+    <div class="episode__div">
+        <h2 class="episode__name">${t.name}</h2>
+        <div class="episode__dive">
+           <p class="episode__text1">Season: <br> <span class="episode__season">${t.episode}</span></p>
+           <p class="episode__text2">Air date: <br> <span class="episode__airDate">${t.air_date}</span></p>
+        </div>
+        <button type="button" class="episode__button"></button>
+    </div>
+    </li>
+    `).join("")}async function u(e){try{return await fetch(`https://rickandmortyapi.com/api/episode?page=${e}`).then(o=>o.json())}catch(o){console.log(o)}}let d=1,l=[];u(d).then(e=>{document.querySelector(".filter__list").innerHTML=a(e.results),console.log(e.results),l=[...l,...e.results],document.querySelector(".filter__list").addEventListener("click",t=>{if(t.target.closest(".episode__button")){document.querySelector(".backdrop").classList.remove("hidden");const r=t.target.closest(".episode"),i=Number(r.dataset.id)-1,s=l[i];document.querySelector(".modal__title").textContent=s.name,console.log(),document.querySelector(".modal__airDate-text").textContent=s.air_date,console.log(s.air_date),document.querySelector(".modal__id-text").textContent=s.id;for(let n=0;n<4;n++)fetch(s.characters[n]).then(c=>c.json()).then(c=>{document.querySelector(`#character${n+1}`).textContent=c.name,document.querySelector(`#image${n+1}`).src=c.image})}}),document.querySelector(".filter__select").addEventListener("change",t=>{const r=t.target.value.toLowerCase();document.querySelector(".filter__input").value="",e.results.forEach((i,s)=>{i.episode.toLowerCase()===r?document.querySelectorAll(".episode")[s].style.display="block":document.querySelectorAll(".episode")[s].style.display="none",r==="All season"&&document.querySelectorAll(".episode").forEach(n=>{n.style.display="block"})})});const o=document.querySelector(".modal__close");o&&o.addEventListener("click",()=>{document.querySelector(".backdrop").classList.add("hidden")})});document.querySelector(".filter__input").addEventListener("input",e=>{const o=e.target.value.toLowerCase();document.querySelectorAll(".episode").forEach(t=>{t.querySelector(".episode__name").textContent.toLowerCase().includes(o)?t.style.display="block":t.style.display="none"})});document.querySelector(".filter__load").addEventListener("click",()=>{d++,u(d).then(e=>{l=[...l,...e.results],document.querySelector(".filter__list").insertAdjacentHTML("beforeend",a(e.results))})});
