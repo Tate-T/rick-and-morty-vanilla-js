@@ -1,9 +1,10 @@
 import { default as renderCharacters } from "./characters/render"
 import { default as getCharacters } from "./api/characters-api"
+import { default as getCharacter } from "./api/getOneCharacter"
 
 let page = 1
 
-
+let allCharacters = []
 
 
 getCharacters(page).then(
@@ -15,13 +16,15 @@ getCharacters(page).then(
         document.querySelector(".filter__list").innerHTML = renderCharacters(data.results);
         console.log(data.results)
         console.log(data)
+        allCharacters = [...allCharacters, ...data.results]
+
 
         document.querySelector('.filter__list').addEventListener('click', (e) => {
             if (e.target.closest('.character__button')) {
                 document.querySelector('.backdrop').classList.remove('hidden');;
                 const character = e.target.closest('.character')
                 const characterId = Number(character.dataset.id) - 1;
-                characterData = data.results[characterId];
+                characterData = allCharacters[characterId];
                 document.querySelector('.modal__img').src = characterData.image
                 document.querySelector('#status').innerHTML = characterData.status
                 document.querySelector('#species').innerHTML = characterData.species
@@ -65,12 +68,14 @@ getCharacters(page).then(
                     document.querySelector(`#season${i + 1}`).textContent = episodeData.episode;
                     document.querySelector(`#airdate${i + 1}`).textContent = episodeData.air_date;
             });
-    }
+        }
 
                 
 
             }
         });
+
+
 
         document.querySelector('#next-episode').addEventListener('click', () => {
             console.log(characterData)
@@ -204,13 +209,29 @@ document.querySelector('.filter__input').addEventListener('input', (e) => {
 
 
 
-document.querySelector('.filter__load-more').addEventListener('click', () => {
-    page++
-    getCharacters(page).then((data) => {
-        document.querySelector(".filter__list").insertAdjacentHTML('beforeend', renderCharacters(data.results));
-    });
-})
 
+document.querySelector('#button-search-characters').addEventListener('click', async () => {
+  const input = document.querySelector('#input-search-characters');
+  if (input.value) {
+    const character = await getCharacter(input.value);
+    if (character) {
+        document.querySelector('.filter__list').style.backgroundImage = `url(./img/component-images/desktop/not-found-PC.webp)`;
+        const list = document.querySelector('.filter__list');
+        list.classList.add('background-character');
+        document.querySelectorAll('.filter__list li').forEach(li => li.style.display = 'none');
+    }
+  }
+});
+
+
+
+document.querySelector('.filter__load-more').addEventListener('click', () => {
+                page++
+                getCharacters(page).then((data) => {
+                    allCharacters = [...allCharacters, ...data.results]
+                    document.querySelector(".filter__list").insertAdjacentHTML('beforeend', renderCharacters(data.results));
+                });
+            })
 
 
 

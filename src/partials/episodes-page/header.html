@@ -1,0 +1,35 @@
+<header class="header">
+    <div class="header__div container">
+        <picture class="header__logo">
+            <source
+                srcset="
+                    ./img/component-images/desktop/logo-pc.webp 1x,
+                    ./img/component-images/desktop/logo-pc-2x.webp 2x,
+                "
+                media="(min-width: 1360px)"
+                />
+            <source
+                srcset="
+                    ./img/component-images/tablet/logo-tablet.webp 1x,
+                    ./img/component-images/tablet/logo-tablet-2x.webp 2x,
+                    "
+                media="(min-width: 768px)"
+                />
+            <source
+                srcset="
+                    ./img/component-images/mobile/logo-mobile.webp 1x,
+                    ./img/component-images/mobile/logo-mobile-2x.webp 2x,
+                    "
+                media="(min-width: 320px)"
+                />
+            <img class="header__logo" src="./img/component-images/desktop/logo-pc.webp" alt="logo" />
+        </picture>
+        <div class="header__input-div">
+            <button onclick="document.querySelector('.filter').scrollIntoView({ behavior: 'smooth' });" id="button-search-episodes" type="button" class="header__button">
+                <img class="header__input-img" src="./img/component-CE/search-header-CE.webp" alt="search">
+            </button>
+            <input id="input-search-episodes" class="header__input" placeholder="Search" type="text">
+        </div>
+        
+    </div>
+</header>
