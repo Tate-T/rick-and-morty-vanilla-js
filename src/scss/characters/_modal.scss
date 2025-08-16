@@ -1,0 +1,340 @@
+.backdrop {
+    overflow-y: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    
+
+}
+
+
+
+.modal {
+    width: 335px;
+    height: 100%;
+    background-color: #0D171D;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    padding-top: 35px;
+    padding-left: 20px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    gap: 10px;
+    flex-direction: column;
+    position: relative;
+    margin: 0 auto;
+    overflow-y: hidden;
+
+    @media screen and (min-width: 768px){
+        width: 702px;
+        height: 526px;
+        padding-top: 33px;
+        padding-bottom: 33px;
+        padding-left: 33px;
+        gap: 15px;
+        flex-direction: row;
+        
+    }
+
+    @media screen and (min-width: 1360px){
+        width: 710px;
+        height: 526px;
+    }
+
+    &__character-div {
+        width: 295px;
+        height: 469px;
+
+        @media screen and (min-width: 768px){
+            width: 278px;
+            height: 446px
+        }
+
+        @media screen and (min-width: 1360px){
+            width: 278px;
+            height: 446px;
+        }
+    }
+
+    &__image {
+        border: 2px solid #A1D737;
+        border-radius: 15px;
+        width: 295px;
+        height: 262px;
+        margin-bottom: 10px;
+
+        @media screen and (min-width: 768px){
+            width: 278px;
+            height: 292px;
+            margin-bottom: 10px;
+        }
+
+        @media screen and (min-width: 1360px){
+
+        }
+    }
+
+    &__info {
+        width: 295px;
+        height: 120px;
+        padding-top: 10px;
+        padding-left: 15px;
+        padding-bottom: 10px;
+        border: 2px solid #A1D737;
+        border-radius: 15px;
+
+        @media screen and (min-width: 768px){
+            padding-left: 15px;
+            padding-top: 25px;
+            width: 278px;
+            height: 160px;
+        }
+
+        @media screen and (min-width: 1360px){
+
+        }
+    }
+    
+    &__info-list {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 15px;
+        row-gap: 15px;
+
+        @media screen and (min-width: 768px){
+            column-gap: 15px;
+            row-gap: 25px;
+        }
+
+        @media screen and (min-width: 1360px){
+
+        }
+    }
+
+    &__info-text {
+        margin-bottom: 7px;
+        color: #FAFAFA;
+        opacity: 40%;
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 400;
+
+        @media screen and (min-width: 768px){
+
+        }
+
+        @media screen and (min-width: 1360px){
+
+        }
+    }
+
+    &__info-info {
+        color: #FAFAFA;
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 400;
+        max-width: 90px;
+        overflow: hidden;
+        text-overflow: ellipsis; 
+        text-wrap: nowrap;
+
+
+        @media screen and (min-width: 768px){
+            font-size: 14px;
+            max-width: 75px;
+        }
+    }
+
+
+    &__title {  
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 20px;
+        color: #FAFAFA;
+
+
+        @media screen and (min-width: 768px){
+            font-size: 24px;
+            line-height: 28px;
+            margin-bottom: 20px;
+        }
+
+        @media screen and (min-width: 1360px){
+
+        }
+    }
+
+
+    &__episodes-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 295px;
+        overflow: hidden;
+
+        @media screen and (min-width: 768px){
+            width: 352px;
+            gap: 10px;
+        }
+
+        @media screen and (min-width: 1360px){
+
+        }
+    }
+
+    &__episodes-item {
+        display: flex;
+        width: 295px;
+        height: 64px;
+        border: 2px solid #A1D737;
+        border-radius: 20px;
+        padding-left: 10px;
+        padding-top: 10px;
+        flex-shrink: 0;
+
+        @media screen and (min-width: 768px){
+            padding-left: 12px;
+            padding-top: 12px;
+            width: 352px;
+            height: 68px;
+        }
+
+        @media screen and (min-width: 1360px){
+
+        }
+    }
+
+    &__episode-title {
+        color: #A1D737;
+        font-weight: 600;
+        width: 60px;
+        margin-right: 25px;
+        font-size: 14px;
+        line-height: 18px;
+        overflow: hidden;
+        text-overflow: ellipsis; 
+        text-wrap: nowrap;
+
+        @media screen and (min-width: 768px){
+            font-size: 14px;
+            line-height: 18px;
+            width: 105px;
+            margin-right: 30px;
+        }
+
+        @media screen and (min-width: 1360px){
+
+        }
+    }
+
+    &__episode-season {
+        margin-right: 25px;
+
+
+        @media screen and (min-width: 768px){
+
+        }
+
+        @media screen and (min-width: 1360px){
+
+        }
+    }
+
+    &__episode-text {
+        font-size: 12px;
+        line-height: 14px;
+        color: #FAFAFA;
+        opacity: 50%;
+        font-weight: 400;
+        margin-bottom: 5px;
+
+        @media screen and (min-width: 768px){
+
+        }
+    }
+
+    &__episode-info {
+        font-size: 12px;
+        line-height: 14px;
+        color: #FAFAFA;
+        font-weight: 400;
+    }
+
+
+
+
+    &__close {
+        position: absolute;
+        right: 7px;
+        top: 7px;
+        background-color: transparent;
+        border: none;
+
+        @media screen and (min-width: 768px){
+            right: 10px;
+            top: 15px;
+        }
+
+    }
+
+    &__close-img {
+        width: 20px;
+        height: 20px;
+
+        @media screen and (min-width: 768px){
+            width: 22px; 
+            height: 22px;
+        }
+    }
+
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+    }
+}
+
+
+.hidden {
+    display: none;
+}
+
+#item2, #item3, #item4, #item5 {
+    display: none;
+
+    @media screen and (min-width: 768px){
+        display: flex;
+        }
+}
+
+
+
+
+#next-episode {
+    display: block;
+    margin: 0 auto;
+    margin-top: 12px;
+    background-color: transparent;
+    border: 2px solid #A1D737;
+    color: #A1D737;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    @media screen and (min-width: 768px){
+        display: none;
+        }
+}

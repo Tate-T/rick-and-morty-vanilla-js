@@ -1,11 +1,18 @@
+
+
 .tags {
     background-position-x: center;
-    background-repeat: no-repeat;
     background-size: auto 115px;
-    height: 200px;
+    background-repeat: repeat-x;
+    height: 160px;
     background-image: url(../img/component-images/tags.webp);
     margin: 0 auto;
     background-position-y: 25px;
+    animation-name: scroll-right-3;
+    animation-duration: 15s;
+    animation-timing-function: linear; 
+    animation-iteration-count: infinite; 
+
     
 
   
@@ -19,12 +26,40 @@
     @media screen and (min-width: 768px) {
         background-size: auto 173px;
         background-position-y: 80px;
-        height: 320px;
+        height: 310px;
+        animation-name: scroll-right-2;
+        animation-duration: 15s;
+        animation-timing-function: linear; 
+        animation-iteration-count: infinite; 
 
     }
     @media screen and (min-width: 1360px) {
         background-size: 1440px 173px;
         height: 250px;
         background-position-y: 20px;
+        animation-name: scroll-right;
+        animation-duration: 15s;
+        animation-timing-function: linear; 
+        animation-iteration-count: infinite;
     }
+
 }
+
+@keyframes scroll-right {
+  from { background-position-x: 0; }
+  to   { background-position-x: 1000%; }
+}
+
+
+@keyframes scroll-right-2 {
+  from { background-position-x: 0; }
+  to   { background-position-x: -1000%; }
+}
+
+
+@keyframes scroll-right-3 {
+  from { background-position-x: 0; }
+  to   { background-position-x: -1000%; }
+}
+
+

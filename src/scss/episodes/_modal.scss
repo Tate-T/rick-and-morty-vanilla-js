@@ -1,0 +1,263 @@
+.backdrop {
+    overflow-y: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal {
+    flex-direction: column;
+    position: relative;
+    margin: 0 auto;
+    overflow-y: hidden;
+    padding: 40px 20px;
+    background: #0D171D;
+    border-radius: 14px;
+    width: 335px;
+    height: 410px;
+
+    @media screen and (min-width: 768px) {
+        border-radius: 18px;
+        width: 673px;
+        height: 370px;
+        padding: 32px;
+    }
+
+    @media screen and (min-width: 1360px) {
+        border-radius: 18px;
+        width: 673px;
+        height: 370px;
+        padding: 32px;
+    }
+
+    &__border {
+        width: 295px;
+        height: 330px;
+        border-radius: 18px;
+        border: 2px solid #A1D737;
+
+        @media screen and (min-width: 768px) {
+            width: 609px;
+            height: 306px;
+        }
+
+        @media screen and (min-width: 1360px) {
+            width: 609px;
+            height: 306px;
+        }
+    }
+
+    &__episode-div {
+        display: flex;
+        gap: 14px;
+        margin-left: 20px;
+        margin-bottom: 40px;
+
+        @media screen and (min-width: 768px) {
+            gap: 32px;
+            margin-left: 32px;
+        }
+    }
+
+    &__title {
+        color: #FAFAFA;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+        margin-top: 20px;
+        margin-left: 20px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 24px;
+            line-height: 28px;
+            margin-top: 28px;
+            margin-left: 32px;
+        }
+    }
+
+    &__id,
+    &__airDate {
+        color: rgba(250, 250, 250, 0.50);
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 14px;
+        
+    }
+
+    &__id-text,
+    &__airDate-text {
+        color: #FAFAFA;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 16px;
+        }
+
+        @media screen and (min-width: 1360px) {
+            font-size: 16px;
+        }
+    }
+
+    &__title-characters {
+        color: #FAFAFA;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+        margin-left: 20px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 24px;
+            line-height: 28px;
+            margin-left: 32px;
+        }
+    }
+
+    &__characters {
+        width: 535px;
+        display: flex;
+        gap: 8px;
+        row-gap: 32px;
+    }
+
+    &__subtitle {
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            color: rgba(250, 250, 250, 0.50);
+            width: 102px;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 14px;
+            display: block;
+            height: 11px;
+        }
+    }
+
+    &__characters-img {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (min-width: 768px) {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    &__name {
+        color: #FAFAFA;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+        width: 50px;
+        overflow: hidden;
+        text-overflow: ellipsis; 
+        text-wrap: nowrap;
+
+        @media screen and (min-width: 768px) {
+            font-size: 16px;
+            width: 80px;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        right: 7px;
+        top: 7px;
+        background-color: transparent;
+        border: none;
+
+        @media screen and (min-width: 768px) {
+            right: 10px;
+            top: 15px;
+        }
+
+    }
+
+    &__close-img {
+        width: 20px;
+        height: 20px;
+
+        @media screen and (min-width: 768px) {
+            width: 22px;
+            height: 22px;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+    }
+
+    &__characters-list {
+        display: flex;
+        width: 298px;
+        height: 114px;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        column-gap: 25px;
+        padding-left: 20px;
+
+        @media screen and (min-width: 768px) {
+            width: 585px;
+            height: 60px;
+            flex-wrap: nowrap;
+            column-gap: 25px;
+            padding-left: 30px;
+        }
+
+        @media screen and (min-width: 768px) {
+
+        }
+    }
+
+    &__characters-item {
+        display: flex;
+        gap: 10px;
+        width: 120px;
+        height: 50px;
+        align-items: center;
+
+        @media screen and (min-width: 768px) {
+            width: 130px;
+            height: 60px;
+        }
+
+        @media screen and (min-width: 768px) {
+
+        }
+    }
+
+    &__characters-img {
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+
+        @media screen and (min-width: 768px) {
+            width: 60px;
+            height: 60px;
+        }
+    }
+}
+
+.hidden{
+    display: none;
+}
