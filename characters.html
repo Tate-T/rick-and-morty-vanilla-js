@@ -13,9 +13,8 @@
       referrerpolicy="no-referrer"
     />
     
-    <script type="module" crossorigin src="/rick-and-morty-vanilla-js/assets/characters-b179b621.js"></script>
-    <link rel="modulepreload" crossorigin href="/rick-and-morty-vanilla-js/assets/modulepreload-polyfill-3cfb730f.js">
-    <link rel="stylesheet" href="/rick-and-morty-vanilla-js/assets/characters-0c7b5cb8.css">
+    <script type="module" crossorigin src="/rick-and-morty-vanilla-js/assets/main-dda17a21.js"></script>
+    <link rel="stylesheet" href="/rick-and-morty-vanilla-js/assets/characters-7e4ebe32.css">
   </head>
   <body>
     <div class="black-background"></div>
@@ -86,79 +85,7 @@
         <img class="tags__img" src="./img/component-images/tags.webp" alt="tags" />
     </picture> -->
 </section>
-      <section class="filter">
-    <div class="filter__container container">
-        <div class="filter__div">
-            <div class="filter__input-div">
-                <p class="filter__label">Name</p>
-                <div class="filter__input-button-div">
-                    <input class="filter__input" type="text" placeholder="Enter name">
-                    <button class="filter__search-button" type="button">
-                            <img
-                            class="filter__search-img"
-                            src="data:image/webp;base64,UklGRtIAAABXRUJQVlA4WAoAAAAQAAAAEQAAEQAAQUxQSH4AAAABcE5te948CDHYi1CDxWAzaAyC8MYgMwhCEV6EIrwIQXh+5KNDiIgJwN9j1q9spc6xyarQ3gFHpcssUTEV95k7lpF5iPysYDZkho3aByU2lUPia+O6h0BdSW8Dri6LRpmI+zmEHw1zcd5VW6exzIBknV4PKMtiU3k+QpJnAABWUDggLgAAAPACAJ0BKhIAEgA+kTqZSCWjIqEoDVCwEglpAAA8HbQAAP73M0XZf7ii//w4AAA="
-                            alt="search"
-                            />
-                    </button>
-                </div>
-            </div>
-            <div class="filter__selects-div">
-                    <div class="filter__select-div1">
-                        <div class="filter__select-div">
-                            <p class="filter__label">Status</p>
-                                <select class="filter__select1" name="Alive" id="">
-                                    <option value="All">All</option>
-                                    <option value="Alive">Alive</option>
-                                    <option value="Dead">Dead</option>
-                                    <option value="Unknown">Unknown</option>
-                                </select>
-                            </div>
-                            <div class="filter__select-div">
-                                <p class="filter__label">Species</p>
-                                <select class="filter__select2" name="Human" id="">
-                                    <option value="All">All</option>
-                                    <option value="Human">Human</option>
-                                    <option value="Alien">Alien</option>
-                                    <option value="Mythological Creature">Mythological Creature</option>
-                                    <option value="Humanoid">Humanoid</option>
-                                    <option value="Animal">Animal</option>
-                                    <option value="Cronenberg">Cronenberg</option>
-                                    <option value="Poopybutthole">Poopybutthole</option>
-                                    <option value="Robot">Robot</option>
-                                    <option value="Disease">Disease</option>
-                                </select>
-                            </div>
-                        </div>
-                            <div class="filter__select-div2">
-                                <div class="filter__select-div">
-                                    <p class="filter__label">Type</p>
-                                    <select class="filter__select3" name="Parasite" id="">
-                                        <option value="All">All</option>
-                                        <option value="Parasite">Parasite</option>
-                                        <option value="Human with ants in his eyes">Human with ants in his eyes</option>
-                                        <option value="Superhuman">Superhuman</option>
-                                        <option value="Genetic experiment">Genetic experiment</option>
-                                        <option value="Fish-Person">Fish-Person</option>
-                                        <option value="Cromulon">Cromulon</option>
-                                    </select>
-                                </div>
-                                <div class="filter__select-div">
-                                    <p class="filter__label">Gender</p>
-                                    <select class="filter__select4" name="All" id="">
-                                        <option value="All">All</option>
-                                        <option value="Female">Female</option>
-                                        <option value="Male">Male</option>
-                                        <option value="Genderless">Genderless</option>
-                                        <option value="Unknown">Unknown</option>
-                                    </select>
-                                </div>
-                            </div>     
-                        </div>
-        </div>
-        <ul class="filter__list"></ul>
-        <button class="filter__load-more" type="button">Load more</button>
-    </div>
-</section>
+      
     </main>
     <footer class="footer">
     <div class="footer__container container">
@@ -237,113 +164,7 @@
         <p class="footer__article">Privacy Policy Public Offering Agreement</p>
     </div>
 </footer>
-    <div class="backdrop hidden">
-    <div class="modal">
-        <div class="modal__character-div">
-            <div class="modal__image">
-                <img class="modal__img" src="" alt="image of a character">
-            </div>
-            <div class="modal__info">
-                <ul class="modal__info-list">
-                    <li class="modal__info-item">
-                        <p class="modal__info-text">Status</p>
-                        <p class="modal__info-info" id="status">Alive</p>
-                    </li>
-                    <li class="modal__info-item">
-                        <p class="modal__info-text">Species</p>
-                        <p class="modal__info-info" id="species">Human</p>
-                    </li>
-                    <li class="modal__info-item">
-                        <p class="modal__info-text">Gender</p>
-                        <p class="modal__info-info" id="gender">Male</p>
-                    </li>
-                    <li class="modal__info-item">
-                        <p class="modal__info-text">Origin</p>
-                        <p class="modal__info-info" id="origin">Earth</p>
-                    </li>
-                    <li class="modal__info-item">
-                        <p class="modal__info-text">Location</p>
-                        <p class="modal__info-info" id="location">Australia</p>
-                    </li>
-                    <li class="modal__info-item">
-                        <p class="modal__info-text">Episodes</p>
-                        <p class="modal__info-info" id="episodes">1,2,3,4</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="modal__episodes-div">
-            
-            <h2 class="modal__title">Episodes</h2>
-            <ul class="modal__episodes-list">
-                <li id="item1"  class="modal__episodes-item">
-                    <h3 id="title1" class="modal__episode-title">Pilot</h3>
-                    <div class="modal__episode-season">
-                        <p class="modal__episode-text">Episode</p>
-                        <p id="season1" class="modal__episode-info">1</p>
-                    </div>
-                    <div class="modal__episode-airdate">
-                        <p class="modal__episode-text">Air date</p>
-                        <p id="airdate1" class="modal__episode-info">Deceember 2, 2013</p>
-                    </div>
-                </li>
-                <li id="item2" class="modal__episodes-item">
-                    <h3  id="title2" class="modal__episode-title">Lawnmower</h3>
-                    <div class="modal__episode-season">
-                        <p class="modal__episode-text">Episode</p>
-                        <p id="season2" class="modal__episode-info">1</p>
-                    </div>
-                    <div class="modal__episode-airdate">
-                        <p class="modal__episode-text">Air date</p>
-                        <p id="airdate2" class="modal__episode-info">December 9, 2013</p>
-                    </div>
-                </li>
-                <li id="item3" class="modal__episodes-item">
-                    <h3 id="title3" class="modal__episode-title">Anatomy Park</h3>
-                    <div class="modal__episode-season">
-                        <p class="modal__episode-text">Episode</p>
-                        <p id="season3" class="modal__episode-info">1</p>
-                    </div>
-                    <div class="modal__episode-airdate">
-                        <p class="modal__episode-text">Air date</p>
-                        <p id="airdate3" class="modal__episode-info">December 16, 2013</p>
-                    </div>
-                </li>
-                <li id="item4" class="modal__episodes-item">
-                    <h3 id="title4" class="modal__episode-title">M.Night</h3>
-                    <div class="modal__episode-season">
-                        <p class="modal__episode-text">Episode</p>
-                        <p id="season4" class="modal__episode-info">1</p>
-                    </div>
-                    <div class="modal__episode-airdate">
-                        <p class="modal__episode-text">Air date</p>
-                        <p id="airdate4" class="modal__episode-info">January 13, 2014</p>
-                    </div>
-                </li>
-                <li id="item5" class="modal__episodes-item">
-                    <h3 id="title5" class="modal__episode-title">Meeseeks</h3>
-                    <div class="modal__episode-season">
-                        <p class="modal__episode-text">Episode</p>
-                        <p id="season5" class="modal__episode-info">1</p>
-                    </div>
-                    <div class="modal__episode-airdate">
-                        <p class="modal__episode-text">Air date</p>
-                        <p id="airdate5" class="modal__episode-info">January 20, 2014</p>
-                    </div>
-                </li>
-            </ul>
-            <button type="button" id="next-episode">Next Episode</button>
-        </div>
-        <button class="modal__close" type="button">
-            <picture class="modal__close-img">
-                    <source
-                        srcset="data:image/webp;base64,UklGRvIAAABXRUJQVlA4WAoAAAAQAAAAFQAAFQAAQUxQSFoAAAABJ0CQbRvbjGZypEdE0DwYRLab6DUxcCQABaCBgn9TSY8URPR/Avh54wQTFdgGM15AFkNSthV3vMjikc6V6likthWt5fmqbCtJvSyMl7OtQFITBRgH02CD+TNWUDggcgAAAHADAJ0BKhYAFgA+kUKcSiWjoqGoCACwEglsACPAN4KAg+m+AAD+7e1n+9j/5F5j+P5WpfBoJ56c2MyPkpfBgjCtsg6ugcwMUfg2J7P/wWvi2FbW6iuXbHtiAP7iUeoWqx/u/j145UHEav7+0/h95ogAAA== 1x, data:image/webp;base64,UklGRn4BAABXRUJQVlA4WAoAAAAQAAAAKwAAKwAAQUxQSIIAAAABL0CQbRvbSIZ2lEdEMPNwU9u2Ez2CAhQgIfdpRgE8/1oIN3S0Ef1n5EZSnGLxFUheEV8yGu8IbdbYkgXrj52sOC7QOUjdBVpFcIgCogKUgJqXBi8NHh247OWzdjoz/5bzwSEv3wnIywvIy984vjB8oQWkmvZ5eaRgVRFI4f6dHzICVlA4INYAAABwBwCdASosACwAPpFIn0ulpCKho4gAsBIJbAC+V4AOkA57X2E/2q9IDVssAATJALCIwDsx0ppTwgMUYQ2phnzl+Z30eAD+/FTl/yyoD/Sal9+np6Vy2HzM8HKHcpodxJf4/awuX3oBhDHSWIr3q3os+1HhaCtHIlYynjlKr9Ywpor70AwiAwIQf1p5bCE1H92optDBXnbRmwp0zvpsL9KN05TGLV1/zB7LwOxiCdcibmY1MM/9hY+1P5jP6+F/9G0s+HYWHyKpvpkqSNZiXZmpkkBAgAAA 2x"
-                        />
-                <img class="modal-close-img" src="data:image/webp;base64,UklGRvIAAABXRUJQVlA4WAoAAAAQAAAAFQAAFQAAQUxQSFoAAAABJ0CQbRvbjGZypEdE0DwYRLab6DUxcCQABaCBgn9TSY8URPR/Avh54wQTFdgGM15AFkNSthV3vMjikc6V6likthWt5fmqbCtJvSyMl7OtQFITBRgH02CD+TNWUDggcgAAAHADAJ0BKhYAFgA+kUKcSiWjoqGoCACwEglsACPAN4KAg+m+AAD+7e1n+9j/5F5j+P5WpfBoJ56c2MyPkpfBgjCtsg6ugcwMUfg2J7P/wWvi2FbW6iuXbHtiAP7iUeoWqx/u/j145UHEav7+0/h95ogAAA==" alt="characters hero section image" />
-            </picture>
-        </button>
-    </div>
-</div>
+    
     
   </body>
 </html>
