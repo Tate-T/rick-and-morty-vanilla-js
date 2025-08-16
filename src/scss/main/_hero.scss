@@ -1,17 +1,17 @@
 .hero {
-  color: #FAFAFA;
+  color: #fafafa;
   padding-bottom: 0px;
   padding-top: 10px;
 
-  @media screen and (min-width: 768px){
-      padding-bottom: 0px;
-      padding-top: 0px;
-    }
+  @media screen and (min-width: 768px) {
+    padding-bottom: 0px;
+    padding-top: 0px;
+  }
 
-  @media screen and (min-width: 1360px){
-      padding-bottom: 0px;
-      padding-top: 10px;
-    }
+  @media screen and (min-width: 1360px) {
+    padding-bottom: 0px;
+    padding-top: 10px;
+  }
 
   &__box {
     display: flex;
