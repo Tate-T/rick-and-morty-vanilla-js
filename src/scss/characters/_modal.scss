@@ -27,7 +27,7 @@
     padding-left: 20px;
     padding-right: 15px;
     padding-bottom: 20px;
-    gap: 25px;
+    gap: 10px;
     flex-direction: column;
     position: relative;
     margin: 0 auto;
@@ -68,7 +68,7 @@
         border: 2px solid #A1D737;
         border-radius: 15px;
         width: 295px;
-        height: 292px;
+        height: 262px;
         margin-bottom: 10px;
 
         @media screen and (min-width: 768px){
@@ -84,17 +84,18 @@
 
     &__info {
         width: 295px;
-        height: 160px;
-        padding-top: 25px;
-        padding-left: 20px;
+        height: 130px;
+        padding-top: 15px;
+        padding-left: 15px;
         padding-bottom: 10px;
         border: 2px solid #A1D737;
         border-radius: 15px;
 
         @media screen and (min-width: 768px){
-            padding-left: 20px;
+            padding-left: 15px;
             padding-top: 25px;
             width: 278px;
+            height: 160px;
         }
 
         @media screen and (min-width: 1360px){
@@ -106,7 +107,7 @@
         display: flex;
         flex-wrap: wrap;
         column-gap: 15px;
-        row-gap: 25px;
+        row-gap: 15px;
 
         @media screen and (min-width: 768px){
             column-gap: 15px;
@@ -317,24 +318,7 @@
 }
 
 
-#next-episode {
-    display: block;
-    margin: 0 auto;
-    margin-top: 20px;
-    background-color: transparent;
-    border: 2px solid #A1D737;
-        color: #A1D737;
-        font-size: 14px;
-        font-weight: 600;
-        padding: 6px 16px;
-        border-radius: 15px;
-        cursor: pointer;
-        transition: background-color 0.3s ease, color 0.3s ease;
 
-    @media screen and (min-width: 768px){
-        display: none;
-        }
-}
 
 #next-episode {
     display: block;
@@ -342,13 +326,13 @@
     margin-top: 15px;
     background-color: transparent;
     border: 2px solid #A1D737;
-        color: #A1D737;
-        font-size: 14px;
-        font-weight: 600;
-        padding: 6px 16px;
-        border-radius: 15px;
-        cursor: pointer;
-        transition: background-color 0.3s ease, color 0.3s ease;
+    color: #A1D737;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 
     @media screen and (min-width: 768px){
         display: none;
