@@ -1,0 +1,109 @@
+.slider {
+  border-radius: 100px;
+  background: #0d171d;
+  max-width: 1442px;
+  height: 744px;
+  flex-shrink: 0;
+  overflow: hidden;
+  margin: auto;
+  padding-top: 80px;
+
+  @media screen and (max-width: 1360px) {
+    height: 747px;
+    border-radius: 80px;
+  }
+
+  @media screen and (max-width: 768px) {
+    border-radius: 50px;
+  }
+
+  @media screen and (max-width: 460px) {
+    border-radius: 50px;
+  }
+
+  &__text {
+    max-width: 610px;
+    color: #fafafa;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 48px;
+
+    @media screen and (max-width: 768px) {
+      color: #fafafa;
+      font-family: Montserrat;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 32px;
+      max-width: 306px;
+    }
+  }
+
+  &__span {
+    background-color: #a1d737;
+    border-radius: 40px;
+    padding: 2px 5px;
+  }
+
+  &__button {
+    display: inline-flex;
+    padding: 12px 24px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 1000px;
+    background: #a1d737;
+    color: #0d171d;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    border: none;
+
+    @media screen and (max-width: 1360px) {
+      margin-right: 42px;
+    }
+  }
+
+  &__button__box {
+    display: flex;
+    justify-content: end;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    justify-content: flex-start;
+    margin: 64px 0 32px 0;
+    flex-wrap: nowrap;
+    transform: translateX(0);
+  }
+
+  &__img {
+    display: flex;
+    width: 278px;
+    height: 314px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    border: 3px solid #a1d737;
+    background: #0d171d;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+
+  &__img:last-child {
+    @media screen and (max-width: 1360px) {
+      display: none;
+    }
+  }
+
+  &__img:first-child {
+    @media screen and (max-width: 1360px) {
+      display: none;
+    }
+  }
+}
