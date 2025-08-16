@@ -18,12 +18,12 @@
 
 .modal {
     width: 335px;
-    height: 95%;
+    height: 100%;
     background-color: #0D171D;
     border-radius: 16px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     display: flex;
-    padding-top: 40px;
+    padding-top: 35px;
     padding-left: 20px;
     padding-right: 15px;
     padding-bottom: 20px;
@@ -84,8 +84,8 @@
 
     &__info {
         width: 295px;
-        height: 130px;
-        padding-top: 15px;
+        height: 120px;
+        padding-top: 10px;
         padding-left: 15px;
         padding-bottom: 10px;
         border: 2px solid #A1D737;
@@ -323,11 +323,11 @@
 #next-episode {
     display: block;
     margin: 0 auto;
-    margin-top: 15px;
+    margin-top: 12px;
     background-color: transparent;
     border: 2px solid #A1D737;
     color: #A1D737;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     padding: 6px 16px;
     border-radius: 15px;
