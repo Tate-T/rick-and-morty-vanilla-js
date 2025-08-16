@@ -13,9 +13,8 @@
       referrerpolicy="no-referrer"
     />
     
-    <script type="module" crossorigin src="/rick-and-morty-vanilla-js/assets/index-361a1f00.js"></script>
-    <link rel="modulepreload" crossorigin href="/rick-and-morty-vanilla-js/assets/modulepreload-polyfill-3cfb730f.js">
-    <link rel="stylesheet" href="/rick-and-morty-vanilla-js/assets/index-cc69fff1.css">
+    <script type="module" crossorigin src="/rick-and-morty-vanilla-js/assets/main-dda17a21.js"></script>
+    <link rel="stylesheet" href="/rick-and-morty-vanilla-js/assets/index-79b39ead.css">
   </head>
   <body>
     <div class="black-background-main"></div>
@@ -67,7 +66,7 @@
         </div>
       </div>
     </div>
-    <button type="button" class="hero__button-tobottom">
+    <a href="#bottom" class="hero__button-tobottom">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
         <circle
           cx="40"
@@ -82,11 +81,20 @@
           stroke-opacity="0.5"
         />
       </svg>
-    </button>
+    </a>
   </div>
 </section>
 
       <section class="tags">
+    <!-- <picture class="tags__img">
+        <source
+            srcset="
+            ./img/component-images/tags.webp 1x,
+            ./img/component-images/tags-2x.webp 2x
+            "
+        />
+        <img class="tags__img" src="./img/component-images/tags.webp" alt="tags" />
+    </picture> -->
 </section>
       <section class="main-characters">
   <div class="main-characters__title">
@@ -148,27 +156,27 @@
       <div class="slider__box">
         <img
           class="slider__img"
-          src="/rick-and-morty-vanilla-js/assets/image1-e18f5e9f.webp"
+          src="../../img/mainpage-images/slider-images/image1.webp"
           alt=""
         />
         <img
           class="slider__img"
-          src="/rick-and-morty-vanilla-js/assets/image2-6ae85589.webp"
+          src="../../img/mainpage-images/slider-images/image2.webp"
           alt=""
         />
         <img
           class="slider__img"
-          src="/rick-and-morty-vanilla-js/assets/image3-c2e69592.webp"
+          src="../../img/mainpage-images/slider-images/image3.webp"
           alt=""
         />
         <img
           class="slider__img"
-          src="/rick-and-morty-vanilla-js/assets/image4-683da9fc.webp"
+          src="../../img/mainpage-images/slider-images/image4.webp"
           alt=""
         />
         <img
           class="slider__img"
-          src="/rick-and-morty-vanilla-js/assets/image5-62150276.webp"
+          src="../../img/mainpage-images/slider-images/image5.webp"
           alt=""
         />
       </div>
@@ -180,7 +188,7 @@
 </section>
 
     </main>
-    <footer class="footer">
+    <footer id="bottom" class="footer">
     <div class="footer__container container">
         <div class="footer__div">
             <div class="footer__picture-div">
