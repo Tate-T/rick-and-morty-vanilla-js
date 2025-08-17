@@ -46,6 +46,7 @@
 
   &__episodes-btn {
     // width: 113px;
+    cursor: pointer;
     height: 42px;
     border: 1px solid #7b7b7b;
     background-color: transparent;
@@ -70,6 +71,18 @@
 
     @media screen and (min-width: 1360px) {
     }
+  }
+
+  &__episodes-btn:hover {
+    background-color: rgb(98, 190, 255);
+    border: 1px black;
+    color: black;
+  }
+
+  &__characters-btn:hover {
+    color: #fafafa;
+    background-color: rgb(156, 160, 37);
+    border: 1px solid #7b7b7b;
   }
 
   &__input-div {

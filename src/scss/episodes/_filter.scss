@@ -180,6 +180,10 @@
         }
     }
 
+    &__load:hover {
+        background-color: #fdfd4a;
+    }
+
     &__load {
         display: flex;
         justify-content: center;
@@ -213,6 +217,7 @@
         }
     }
 }
+
 
 .episode {
     background-color: #0D171D;
