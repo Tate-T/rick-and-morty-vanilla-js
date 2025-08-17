@@ -139,6 +139,7 @@
     &__input {
         font-size: 14px;
         line-height: 18px;
+        outline: none;
 
         @media screen and (min-width: 768px){
             font-size: 16px;
@@ -156,6 +157,7 @@
         background-color: transparent;
         border: none;
         width: 150px;
+        outline: none;
 
         @media screen and (min-width: 768px){
             background-color: transparent;
