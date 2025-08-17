@@ -38,7 +38,7 @@ getEpisodes(page).then((data) => {
             const searchName = document.querySelector('#input-search-episodes').value.toLowerCase();
             const cards = document.querySelectorAll('.episode');
             let found = false;
-
+            searchName.value = ''
             const filterList = document.querySelector('.filter__list');
 
             const oldNotFound = filterList.querySelector('.not-found');
