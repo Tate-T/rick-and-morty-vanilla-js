@@ -99,7 +99,7 @@ getCharacters(page).then(
             document.querySelector('.filter__select2').value = 'All'
             document.querySelector('.filter__select4').value = 'All'
             document.querySelector('.filter__input').value = ''
-            data.results.forEach((card, index) => {
+            allCharacters.forEach((card, index) => {
             if (card.status.toLowerCase() === searchStatus) {
                 document.querySelectorAll('.character')[index].style.display = 'block';
             } else {
@@ -119,7 +119,7 @@ getCharacters(page).then(
             document.querySelector('.filter__select1').value = 'All'
             document.querySelector('.filter__select3').value = 'All'
             document.querySelector('.filter__select4').value = 'All'
-            data.results.forEach((card, index) => {
+            allCharacters.forEach((card, index) => {
             if (card.species.toLowerCase() === searchSpecies) {
                 document.querySelectorAll('.character')[index].style.display = 'block';
             } else {
@@ -140,7 +140,7 @@ getCharacters(page).then(
             document.querySelector('.filter__select2').value = 'All'
             document.querySelector('.filter__select4').value = 'All'
             document.querySelector('.filter__input').value = ''
-            data.results.forEach((card, index) => {
+            allCharacters.forEach((card, index) => {
             if (card.type.toLowerCase() === searchType) {
                 document.querySelectorAll('.character')[index].style.display = 'block';
             } else {
@@ -162,7 +162,7 @@ getCharacters(page).then(
             document.querySelector('.filter__select2').value = 'All'
             document.querySelector('.filter__select3').value = 'All'
             document.querySelector('.filter__input').value = ''
-            data.results.forEach((card, index) => {
+            allCharacters.forEach((card, index) => {
             if (card.gender.toLowerCase() === searchGender) {
                 document.querySelectorAll('.character')[index].style.display = 'block';
             } else {
