@@ -25,6 +25,24 @@
             </div>
         </div>
         <ul class="filter__list"></ul>
+         <div class="not-found">
+            <picture class="not-found__img">
+                    <source
+                        srcset="./img/component-images/desktop/not-found-PC.webp 1x,
+                                ./img/component-images/desktop/not-found-PC-2x.webp 2x"
+                        media="(min-width: 1360px)" />
+                    <source
+                        srcset="./img/component-images/tablet/not-found-Tablet.webp 1x,
+                                ./img/component-images/tablet/not-found-Tablet-2x.webp 2x"
+                        media="(min-width: 768px)" />
+                    <source
+                        srcset="./img/component-images/mobile/not-found-Mobile.webp 1x,
+                                ./img/component-images/mobile/not-found-Mobile-2x.webp 2x"
+                        media="(min-width: 320px)" />
+                    <img class="hero__image" src="./img/component-images/desktop/not-found-PC.webp" alt="not found image" />
+                </picture>
+                <p class='not-found__text'>Oops! Try looking for something else...</p>
+        </div>
         <button class="filter__load" type="button">Load more</button>
     </div>
 </section>

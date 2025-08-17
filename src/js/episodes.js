@@ -38,12 +38,7 @@ getEpisodes(page).then((data) => {
             const searchName = document.querySelector('#input-search-episodes').value.toLowerCase();
             const cards = document.querySelectorAll('.episode');
             let found = false;
-            
-            const filterList = document.querySelector('.filter__list');
-
-            const oldNotFound = filterList.querySelector('.not-found');
-            if (oldNotFound) oldNotFound.remove();
-            filterList.querySelectorAll('.not-found').forEach(el => el.remove());
+            document.querySelector('.not-found').style.display = 'none';
 
             cards.forEach(card => {
                 const characterName = card.querySelector('.episode__name').textContent.toLowerCase();
@@ -55,31 +50,12 @@ getEpisodes(page).then((data) => {
                     card.style.display = 'none';
                 }
             });
-            searchName.value = ''
+           
 
-            if (!found) {
-            const notFound = document.createElement('div');
-            notFound.classList.add('not-found');
-            notFound.innerHTML = `
-                <picture class="not-found__img">
-                <source
-                    srcset="./img/component-images/desktop/not-found-PC.webp 1x,
-                            ./img/component-images/desktop/not-found-PC-2x.webp 2x"
-                    media="(min-width: 1360px)" />
-                <source
-                    srcset="./img/component-images/tablet/not-found-Tablet.webp 1x,
-                            ./img/component-images/tablet/not-found-Tablet-2x.webp 2x"
-                    media="(min-width: 768px)" />
-                <source
-                    srcset="./img/component-images/mobile/not-found-Mobile.webp 1x,
-                            ./img/component-images/mobile/not-found-Mobile-2x.webp 2x"
-                    media="(min-width: 320px)" />
-                <img class="hero__image" src="./img/component-images/desktop/not-found-PC.webp" alt="not found image" />
-            </picture>
-            <p class='not-found__text'>Oops! Try looking for something else...</p>
-        `;
-        filterList.appendChild(notFound);
+           if (!found) {
+                document.querySelector('.not-found').style.display = 'flex'
     }
+    document.querySelector('#input-search-episodes').value = ''
         });
 
     document.querySelector(".filter__select").addEventListener("change", (e) => {
@@ -108,6 +84,10 @@ getEpisodes(page).then((data) => {
             document.querySelector(".backdrop").classList.add("hidden");
         });
     }
+
+    document.querySelector('.backdrop').addEventListener('click', () => {
+        document.querySelector('.backdrop').classList.add('hidden');
+    })
 });
 
 document.querySelector(".filter__input").addEventListener("input", (e) => {
@@ -125,10 +105,7 @@ document.querySelector(".filter__input").addEventListener("input", (e) => {
 document.querySelector(".filter__load").addEventListener("click", () => {
     page++
     getEpisodes(page).then((data) => {
-        const oldNotFound = document.querySelector('.filter__list .not-found');
-            if (oldNotFound) {
-                oldNotFound.remove();
-            }
+        document.querySelector('.not-found').style.display = 'none' 
         allEpisode = [...allEpisode, ...data.results]
         document.querySelector(".filter__list").insertAdjacentHTML("beforeend", renderEpisodes(data.results));
     });

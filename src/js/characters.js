@@ -82,10 +82,7 @@ getCharacters(page).then(
             const cards = document.querySelectorAll('.character');
             let found = false;
 
-            const filterList = document.querySelector('.filter__list');
-            const oldNotFound = filterList.querySelector('.not-found');
-            if (oldNotFound) oldNotFound.remove();
-            filterList.querySelectorAll('.not-found').forEach(el => el.remove());
+            document.querySelector('.not-found').style.display = 'none'
 
             cards.forEach(card => {
                 const characterName = card.querySelector('.character__name').textContent.toLowerCase();
@@ -98,32 +95,13 @@ getCharacters(page).then(
                 }
             });
 
-            searchName.value = ''
+            
 
 
             if (!found) {
-            const notFound = document.createElement('div');
-            notFound.classList.add('not-found');
-            notFound.innerHTML = `
-                <picture class="not-found__img">
-                <source
-                    srcset="${notFoundPC} 1x,
-                            ${notFoundPC2x} 2x"
-                    media="(min-width: 1360px)" />
-                <source
-                    srcset="./img/component-images/tablet/not-found-Tablet.webp 1x,
-                            ./img/component-images/tablet/not-found-Tablet-2x.webp 2x"
-                    media="(min-width: 768px)" />
-                <source
-                    srcset="./img/component-images/mobile/not-found-Mobile.webp 1x,
-                            ./img/component-images/mobile/not-found-Mobile-2x.webp 2x"
-                    media="(min-width: 320px)" />
-                <img class="not-found__img" src="${notFoundPC}" alt="not found image" />
-            </picture>
-            <p class='not-found__text'>Oops! Try looking for something else...</p>
-        `;
-        filterList.appendChild(notFound);
-    }
+                document.querySelector('.not-found').style.display = 'flex'
+             }
+        document.querySelector('#input-search-characters').value = ''
         });
 
 
@@ -240,6 +218,10 @@ document.querySelector('.modal__close').addEventListener('click', () => {
     document.querySelector('.backdrop').classList.add('hidden');
 })
 
+document.querySelector('.backdrop').addEventListener('click', () => {
+    document.querySelector('.backdrop').classList.add('hidden');
+})
+
 
 document.querySelector('.filter__input').addEventListener('input', (e) => {
     const searchName = e.target.value.toLowerCase();
@@ -268,10 +250,7 @@ document.querySelector('.filter__input').addEventListener('input', (e) => {
 document.querySelector('.filter__load-more').addEventListener('click', () => {
                 page++
                 getCharacters(page).then((data) => {
-                const oldNotFound = document.querySelector('.filter__list .not-found');
-                if (oldNotFound) {
-                    oldNotFound.remove();
-                }
+                    document.querySelector('.not-found').style.display = 'none'
                     allCharacters = [...allCharacters, ...data.results]
                     document.querySelector(".filter__list").insertAdjacentHTML('beforeend', renderCharacters(data.results));
                 });
