@@ -105,6 +105,23 @@
 
     }
 
+      &__text:hover {
+        cursor: pointer;
+        color: #7ac943;
+  }
+
+       &__text-div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+
+        @media screen and (min-width: 768px) {
+        
+        gap: 10px;
+        }
+  }
+
     &__list {
         display: flex;
         gap: 12px;

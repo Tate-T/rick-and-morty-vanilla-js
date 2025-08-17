@@ -35,16 +35,18 @@ getEpisodes(page).then((data) => {
     });
 
     document.querySelector(".filter__select").addEventListener("change", (e) => {
-        const searchSeason = e.target.value.toLowerCase();
+        const searchSeason = e.target.value.charAt(0);
+        const searchAllSeasons = e.target.value
         document.querySelector(".filter__input").value = ""
-        data.results.forEach((card, index) => {
-            if(card.episode.toLowerCase() === searchSeason) {
+        console.log(searchSeason)
+        allEpisode.forEach((card, index) => {
+            if(card.episode.charAt(2) === searchSeason) {
                 document.querySelectorAll(".episode")[index].style.display = "block";
             } else {
                 document.querySelectorAll(".episode")[index].style.display = "none";
             }
 
-            if (searchSeason === 'All season') {
+            if (searchAllSeasons === 'All seasons') {
                 document.querySelectorAll('.episode').forEach((episode) => {
                     episode.style.display = 'block'
                 })
