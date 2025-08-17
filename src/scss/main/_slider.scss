@@ -66,6 +66,10 @@
     }
   }
 
+    &__button:hover {
+        background-color: #fdfd4a;
+    }
+
   &__button__box {
     display: flex;
     justify-content: end;
