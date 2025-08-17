@@ -109,4 +109,14 @@
       height: 80px;
     }
   }
+
+  &__button-tobottom:hover {
+    background-color: #A1D737;
+    color: black;
+    border-radius: 36px;
+  }
+
+  &__svg:hover {
+    stroke: black;
+  }
 }

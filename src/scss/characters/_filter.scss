@@ -11,7 +11,7 @@
         padding-top: 20px;
         padding-bottom: 120px;
     }
-    
+
 
     &__div {
         display: flex;
@@ -317,6 +317,10 @@
             margin-top: 70px;
 
         }
+    }
+
+    &__load-more:hover {
+        background-color: #fdfd4a;
     }
 
     &__list {

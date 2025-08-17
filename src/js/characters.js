@@ -7,6 +7,7 @@ let page = 1
 let allCharacters = []
 
 
+
 getCharacters(page).then(
     (data) =>{
         let characterData;
@@ -68,11 +69,55 @@ getCharacters(page).then(
                     document.querySelector(`#season${i + 1}`).textContent = episodeData.episode;
                     document.querySelector(`#airdate${i + 1}`).textContent = episodeData.air_date;
             });
-        }
+        }}
+        });
 
-                
+        document.querySelector('#button-search-characters').addEventListener('click', () => {
+            const searchName = document.querySelector('#input-search-characters').value.toLowerCase();
+            const cards = document.querySelectorAll('.character');
+            let found = false;
 
-            }
+            const filterList = document.querySelector('.filter__list');
+
+            const oldNotFound = filterList.querySelector('.not-found');
+            if (oldNotFound) oldNotFound.remove();
+            filterList.querySelectorAll('.not-found').forEach(el => el.remove());
+
+            cards.forEach(card => {
+                const characterName = card.querySelector('.character__name').textContent.toLowerCase();
+
+                if (characterName.includes(searchName)) {
+                    card.style.display = 'block';
+                    found = true;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+
+            if (!found) {
+            const notFound = document.createElement('div');
+            notFound.classList.add('not-found');
+            notFound.innerHTML = `
+                <picture class="not-found__img">
+                <source
+                    srcset="../img/component-images/desktop/not-found-PC.webp 1x,
+                            ../img/component-images/desktop/not-found-PC-2x.webp 2x"
+                    media="(min-width: 1360px)" />
+                <source
+                    srcset="../img/component-images/tablet/not-found-Tablet.webp 1x,
+                            ../img/component-images/tablet/not-found-Tablet-2x.webp 2x"
+                    media="(min-width: 768px)" />
+                <source
+                    srcset="../img/component-images/mobile/not-found-Mobile.webp 1x,
+                            ../img/component-images/mobile/not-found-Mobile-2x.webp 2x"
+                    media="(min-width: 320px)" />
+                <img class="hero__image" src="../img/component-images/desktop/not-found-PC.webp" alt="not found image" />
+            </picture>
+            <p class='not-found__text'>Oops! Try looking for something else...</p>
+        `;
+        filterList.appendChild(notFound);
+    }
         });
 
 
@@ -210,24 +255,17 @@ document.querySelector('.filter__input').addEventListener('input', (e) => {
 
 
 
-document.querySelector('#button-search-characters').addEventListener('click', async () => {
-  const input = document.querySelector('#input-search-characters');
-  if (input.value) {
-    const character = await getCharacter(input.value);
-    if (character) {
-        document.querySelector('.filter__list').style.backgroundImage = `url(./img/component-images/desktop/not-found-PC.webp)`;
-        const list = document.querySelector('.filter__list');
-        list.classList.add('background-character');
-        document.querySelectorAll('.filter__list li').forEach(li => li.style.display = 'none');
-    }
-  }
-});
+
 
 
 
 document.querySelector('.filter__load-more').addEventListener('click', () => {
                 page++
                 getCharacters(page).then((data) => {
+                const oldNotFound = document.querySelector('.filter__list .not-found');
+                if (oldNotFound) {
+                    oldNotFound.remove();
+                }
                     allCharacters = [...allCharacters, ...data.results]
                     document.querySelector(".filter__list").insertAdjacentHTML('beforeend', renderCharacters(data.results));
                 });

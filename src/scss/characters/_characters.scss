@@ -110,6 +110,11 @@
 
     }
 
+    &__button:hover {
+        background-color: #A1D737;
+        color: rgb(0, 0, 0)
+    }
+
     &__image-div {
         width: 315px;
         height: 315px;
