@@ -1,6 +1,11 @@
 import { default as renderCharacters } from "./characters/render"
 import { default as getCharacters } from "./api/characters-api"
-import { default as getCharacter } from "./api/getOneCharacter"
+import { default as getCharacter } from "./api/getOneCharacter";
+import notFoundPC from '../img/component-images/desktop/not-found-PC.webp';
+import notFoundPC2x from '../img/component-images/desktop/not-found-PC-2x.webp';
+
+console.log(notFoundPC)
+console.log(notFoundPC2x)
 
 let page = 1
 
@@ -78,7 +83,6 @@ getCharacters(page).then(
             let found = false;
 
             const filterList = document.querySelector('.filter__list');
-
             const oldNotFound = filterList.querySelector('.not-found');
             if (oldNotFound) oldNotFound.remove();
             filterList.querySelectorAll('.not-found').forEach(el => el.remove());
@@ -94,6 +98,8 @@ getCharacters(page).then(
                 }
             });
 
+            searchName.value = ''
+
 
             if (!found) {
             const notFound = document.createElement('div');
@@ -101,8 +107,8 @@ getCharacters(page).then(
             notFound.innerHTML = `
                 <picture class="not-found__img">
                 <source
-                    srcset="./img/component-images/desktop/not-found-PC.webp 1x,
-                            ./img/component-images/desktop/not-found-PC-2x.webp 2x"
+                    srcset="${notFoundPC} 1x,
+                            ${notFoundPC2x} 2x"
                     media="(min-width: 1360px)" />
                 <source
                     srcset="./img/component-images/tablet/not-found-Tablet.webp 1x,
@@ -112,7 +118,7 @@ getCharacters(page).then(
                     srcset="./img/component-images/mobile/not-found-Mobile.webp 1x,
                             ./img/component-images/mobile/not-found-Mobile-2x.webp 2x"
                     media="(min-width: 320px)" />
-                <img class="hero__image" src="./img/component-images/desktop/not-found-PC.webp" alt="not found image" />
+                <img class="not-found__img" src="${notFoundPC}" alt="not found image" />
             </picture>
             <p class='not-found__text'>Oops! Try looking for something else...</p>
         `;

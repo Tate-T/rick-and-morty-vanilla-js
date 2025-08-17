@@ -78,6 +78,7 @@
         line-height: 16px;
         color: #FAFAFA;
         font-weight: 600;
+        outline: none;
 
 
         @media screen and (min-width: 768px) {
@@ -98,5 +99,6 @@
 
     &__input::focus {
         border: none;
+        outline: none;
     }
 }
