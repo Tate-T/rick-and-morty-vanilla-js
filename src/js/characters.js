@@ -81,9 +81,8 @@ getCharacters(page).then(
             const searchName = document.querySelector('#input-search-characters').value.toLowerCase();
             const cards = document.querySelectorAll('.character');
             let found = false;
-            searchName.value = ''
-            const filterList = document.querySelector('.filter__list');
 
+            const filterList = document.querySelector('.filter__list');
             const oldNotFound = filterList.querySelector('.not-found');
             if (oldNotFound) oldNotFound.remove();
             filterList.querySelectorAll('.not-found').forEach(el => el.remove());
@@ -98,6 +97,8 @@ getCharacters(page).then(
                     card.style.display = 'none';
                 }
             });
+
+            searchName.value = ''
 
 
             if (!found) {
