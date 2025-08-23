@@ -84,10 +84,6 @@ getEpisodes(page).then((data) => {
             document.querySelector(".backdrop").classList.add("hidden");
         });
     }
-
-    document.querySelector('.backdrop').addEventListener('click', () => {
-        document.querySelector('.backdrop').classList.add('hidden');
-    })
 });
 
 document.querySelector(".filter__input").addEventListener("input", (e) => {
